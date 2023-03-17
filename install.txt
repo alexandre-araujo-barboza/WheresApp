@@ -1,0 +1,418 @@
+.LOG
+10-08-2019
+react-native-cli: 2.0.1
+react-native: 0.60.4
+
+yarn add react-native-maps
+react-native link react-native-maps
+yarn add @react-native-community/geolocation
+react-native link @react-native-community/geolocation
+
+android/build.gradle:
+buildscript {
+
+  ext {
+     googlePlayServicesVersion = "17.7.85"
+
+     androidMapsUtilsVersion = "0.5+"
+  dependencies {
+    classpath 'com.google.gms:google-services:4.2.0'
+  }
+
+android/app/build.gradle:
+dependencies {
+  implementation 'com.google.firebase:firebase-core:17.0.0'
+}
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'
+
+android\app\src\main\AndroidManifest.xml
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application>
+
+
+      <meta-data
+
+        android:name="com.google.android.geo.API_KEY"
+
+        android:value="AIzaSyCgpQRm7OT69A3ntvthXqRoNgErFAikgEE"
+      />
+
+yarn add react-native-firebase
+react-native link react-native-firebase
+
+copiar para: android/app/google-services.json
+
+android/app/build.gradle:
+dependencies {
+  implementation("com.google.firebase:firebase-firestore:18.0.0")
+  implementation("com.google.android.gms:play-services-base:16.1.0")
+  implementation("com.google.firebase:firebase-core:16.0.9")
+
+android/app/src/main/java/MainApplication.java
+  import io.invertase.firebase.RNFirebasePackage;
+  import io.invertase.firebase.firestore.RNFirebaseFirestorePackage;
+  protected List<ReactPackage> getPackages() {
+     packages.add(new RNFirebaseFirestorePackage());
+
+android/build.gradle:
+android {
+    defaultConfig {
+        multiDexEnabled true
+
+yarn add react-navigation
+react-native link react-navigation
+yarn add react-native-gesture-handler
+react-native link react-native-gesture-handler
+yarn add react-native-fs
+react-native link react-native-fs
+
+console.disableYellowBox = true;
+
+WheresApp - Where are the people?
+Don't go off the map and find your friends anywhere in the world.
+With maps and geolocation.
+
+This simple and very ligh app makes use of geolocation and maps to show
+people who are sharing usage of the app around the world.
+It is a complete initial version for your evaluation and feedback.
+
+https://facebook.github.io/react-native/docs/signed-apk-android
+
+cd android
+gradlew bundleRelease
+The generated AAB can be found under android/app/build/outputs/bundle/release/app.aab, and is ready to be uploaded to Google Play.
+
+react-native run-android --variant=release
+
+Execution failed for task ':app:installRelease'.
+> com.android.builder.testing.api.DeviceException: com.android.ddmlib.InstallException: INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package com.wheresappalpha signatures do not match the previously installed version; ignoring!
+adb uninstall "com.wheresappalpha"
+
+0.0.1 (alpha-test) The initial version (Alpha) for tests.
+
+https://stackoverflow.com/questions/34329715/how-to-add-icons-to-react-native-app
+
+    72*72 ic_launcher.png in mipmap-hdpi.
+    48*48 ic_launcher.png in mipmap-mdpi.
+    96*96 ic_launcher.png in mipmap-xhdpi.
+    144*144 ic_launcher.png in mipmap-xxhdpi.
+    192*192 ic_launcher.png in mipmap-xxxhdpi.
+
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_192px.png -transparent black ic_launcher_round_192px_transparent.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_144px.png -transparent black ic_launcher_round_144px_transparent.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_96px.png -transparent black ic_launcher_round_96px_transparent.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_72px.png -transparent black ic_launcher_round_72px_transparent.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_48px.png -transparent black ic_launcher_round_48px_transparent.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_192px.png -colors 256 ic_launcher_192px_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_144px.png -colors 256 ic_launcher_144px_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_96px.png -colors 256 ic_launcher_96px_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_72px.png -colors 256 ic_launcher_72px_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_48px.png -colors 256 ic_launcher_48px_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_192px_transparent.png -colors 256 ic_launcher_round_192px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_144px_transparent.png -colors 256 ic_launcher_round_144px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_96px_transparent.png -colors 256 ic_launcher_round_96px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_72px_transparent.png -colors 256 ic_launcher_round_72px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_48px_transparent.png -colors 256 ic_launcher_round_48px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_192px_transparent_256c.png -adaptive-resize 144x144 ic_launcher_round_144px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_192px_transparent_256c.png -adaptive-resize 96x96 ic_launcher_round_96px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_192px_transparent_256c.png -adaptive-resize 72x72 ic_launcher_round_72px_transparent_256c.png
+"C:\Program Files\ImageMagick-7.0.8-Q16\convert" ic_launcher_round_192px_transparent_256c.png -adaptive-resize 48x48 ic_launcher_round_48px_transparent_256c.png
+
+minSdkVersion = 18 // (default: 16)
+
+icons - configurar transparências, reduzir para 256 cores -> OK
+Obs:no Android Studio - WebP não funciona!
+
+Otimização para Android:
+https://blog.rocketseat.com.br/reduzindo-o-tamanho-das-builds-para-android-no-react-native/
+
+android/app/build.gradle
+def enableProguardInReleaseBuilds = true
+shrinkResources true
+
+cd android
+gradlew assembleRelease
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:transformClassesAndResourcesWithR8ForRelease'.
+> GC overhead limit exceeded
+
+> Task :app:transformClassesAndResourcesWithR8ForRelease FAILED
+
+gradle.properties:
+android.enableR8=true
+android.enableR8.fullMode=true -> REMOVIDO! 14:05 10/08/2019
+  WARNING: The option setting 'android.enableR8.fullMode=true' is experimental and unsupported.
+  The current default is 'false'.
+ 
+build.gradle:
+buildscript {
+    ...
+    repositories {
+        ...
+        maven {
+            url 'http://storage.googleapis.com/r8-releases/raw'
+        }
+    }
+
+    dependencies {
+        classpath 'com.android.tools:r8:1.4.57'  // Must be before the Gradle Plugin for Android.
+        classpath 'com.android.tools.build:gradle:3.3.1'  // You don't need to upgrade this to use a newer R8 version.
+        ...
+     }
+}
+android/build.gradle
+android {
+  ...
+  defaultConfig {
+    ...
+    versionCode 2
+    versionName "1.1"
+  }
+0.0.2 (alpha-release) - The second version (Alpha-2) - optimized code.
+
+
+Primeira Compilação no IOS - Pendente
+
+
+15:38 10/08/2019
+
+13:24 11/08/2019
+
+12:45 26/03/2021
+
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+react-native run-android --variant=release
+
+13:08 27/03/2021
+
+cd android
+gradlew clean
+
+13:18 27/03/2021
+
+react-native start (npm start)
+react-native run-android
+13:41 27/03/2021
+
+Execution failed for task ':app:transformClassesAndResourcesWithR8ForRelease'.
+> GC overhead limit exceeded
+
+21:36 27/03/2021
+
+java.lang.RuntimeException: 
+at com.facebook.react.bridge.CatalystInstanceImpl.jniLoadScriptFromAssets (CatalystInstanceImpl.java)
+
+
+android\app\build\generated\res\react\release\raw\app.json: Error: Duplicate resources
+
+11:23 28/03/2021
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 6.0.
+
+12:06 28/03/2021
+
+
+Error: Command failed: gradlew.bat app:installRelease -PreactNativeDevServerPort=8081
+
+gradlew app:installRelease - Error loading: app:bundleReleaseJsAndAssets
+
+Task :app:mergeReleaseResources FAILED
+
+Resource and asset merger: Duplicate resources
+
+Task :app:minifyReleaseWithR8 FAILED
+
+Execution failed for task ':app:minifyReleaseWithR8'.
+> com.android.tools.r8.CompatProguardCommandBuilder.setProguardSeedsConsumer(Lcom/android/tools/r8/StringConsumer;)Lcom/android/tools/r8/R8Command$Builder;
+
+12:51 28/03/2021
+
+gradlew app:installRelease - Error loading: app:processReleaseGoogleServices
+Task :app:minifyReleaseWithR8 FAILED
+
+Execution failed for task ':app:minifyReleaseWithR8'.
+> com.android.tools.r8.CompatProguardCommandBuilder.setProguardSeedsConsumer(Lcom/android/tools/r8/StringConsumer;)Lcom/android/tools/r8/R8Command$Builder;
+
+
+14:15 29/03/2021
+
+* What went wrong:
+Execution failed for task ':app:installRelease'.
+> java.util.concurrent.ExecutionException: com.android.builder.testing.api.DeviceException: com.android.ddmlib.InstallException: INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package com.wheresappalpha signatures do not match previously installed version; ignoring!
+
+adb uninstall com.wheresappalpha
+
+
+14:49 29/03/2021
+
+react-native run-android --variant=release
+
+15:10 29/03/2021
+
+11:53 30/03/2021
+
+Gerando o AAB de Lançamento
+Execute o código em um terminal:
+
+cd android && gradlew clean && gradlew bundleRelease
+
+A função bundleRelease criará um bundle de todos os javascripts necessários para rodar sua aplicação em um AAB (Android App Bundle).
+
+O arquivo AAB gerado pode ser encontrado na pasta “android/app/build/outputs/bundle/release/app.aab” e agora está pronto para ser enviado para a Google Play.
+
+Nota: para que o Google Play aceite o formato AAB o App Signing by Google Play precisa previamente ser configurado para sua aplicação no Google Play Console. Se você for atualizar um aplicativo já existente que não utiliza ainda o App Signing by Google Play cheque a seção de migração para mais informações.
+
+Para cada AAB gerado que for ser enviado como uma nova versão é necessário que se modifiquem as variáveis “versionCode” (some +1 a cada novo aab) e “versionNumber” no arquivo “android/app/build.gradle” (suba conforme versionamento. Leia sobre versionamento aqui.) conforme mostrado abaixo:
+
+android {
+
+   defaultConfig {
+
+       versionCode 1
+
+       versionName “1.0.0”
+
+       {…}
+
+   }
+
+   {…}
+
+}
+12:10 30/03/2021
+
+buildscript {
+    ext {
+        buildToolsVersion = "28.0.3"
+        minSdkVersion = 18
+        compileSdkVersion = 29
+        targetSdkVersion = 29
+        supportLibVersion = "28.0.0"
+        googlePlayServicesVersion = "17.7.85"
+        androidMapsUtilsVersion = "0.5+"
+    }
+...
+defaultConfig {
+        applicationId "com.wheresappalpha"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 3
+        versionName "1.0.2"
+        multiDexEnabled true
+    }
+...
+gradlew clean
+gradlew build
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:lint'.
+> Lint found errors in the project; aborting build.
+
+  Fix the issues identified by lint, or add the following to your build script to proceed with errors:
+  ...
+  android {
+      lintOptions {
+          abortOnError false -> STACK OVERFLOW SOLUTION!!! kkkkk
+      }
+  }
+  ...
+
+  Errors found:
+  .gradle\caches\modules-2\files-2.1\io.grpc\grpc-core\1.16.1\8a938ece0ad8d8bf77d790c502ba51ebec114aa9\grpc-core-1.16.1.jar: Error: Invalid package reference in io.grpc:grpc-core; not included in Android: javax.naming.directory. Referenced from io.grpc.internal.JndiResourceResolverFactory.JndiResourceResolver. [InvalidPackage]
+
+Execution failed for task ':react-native-maps:lint'.
+
+Error: Must be one of: PermissionChecker.PERMISSION_GRANTED, PermissionChecker.PERMISSION_DENIED, PermissionChecker.PERMISSION_DENIED_APP_OP [WrongConstant]
+      return checkSelfPermission(getContext(), PERMISSIONS[0]) == PackageManager.PERMISSION_GRANTED
+
+16:35 30/03/2021
+
+react-native start
+gradlew build
+
+grpc-core-1.16.1.jar: Error: Invalid package reference in io.grpc:grpc-core; not included in Android: javax.naming.directory. Referenced from io.grpc.internal.JndiResourceResolverFactory.JndiResourceResolver. [InvalidPackage]
+
+gradlew lintDebug
+
+grpc-core-1.16.1.jar: Invalid package reference in io.grpc:grpc-core; not included in Android: javax.naming.directory. Referenced from io.grpc.internal.JndiResourceResolverFactory.JndiResourceResolver.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="InvalidPackage">
+        <ignore path="*/io.grpc/grpc-core/*"/>
+    </issue>
+</lint>
+
+gradlew build
+
+lintOptions {
+    disable 'InvalidPackage'
+    abortOnError false
+    absolutePaths false
+    lintConfig file('lint.xml')
+}
+
+gradlew lintDebug
+
+Execution failed for task ':react-native-maps:lintDebug'.
+> Lint found errors in the project; aborting build.
+
+  Fix the issues identified by lint, or add the following to your build script to proceed with errors:
+  ...
+  android {
+      lintOptions {
+          abortOnError false
+      }
+  }
+  ...
+
+  Errors found:
+
+  C:\Users\Alexandre\Documents\Projetos\react\WheresApp\WheresAppAlpha\node_modules\react-native-maps\lib\android\src\main\java\com\airbnb\android\react\maps\AirMapView.java:399: Error: Must be one of: PermissionChecker.PERMISSION_GRANTED, PermissionChecker.PERMISSION_DENIED, PermissionChecker.PERMISSION_DENIED_APP_OP [WrongConstant]
+      return checkSelfPermission(getContext(), PERMISSIONS[0]) == PackageManager.PERMISSION_GRANTED ||
+                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  C:\Users\Alexandre\Documents\Projetos\react\WheresApp\WheresAppAlpha\node_modules\react-native-maps\lib\android\src\main\java\com\airbnb\android\react\maps\AirMapView.java:400: Error: Must be one of: PermissionChecker.PERMISSION_GRANTED, PermissionChecker.PERMISSION_DENIED, PermissionChecker.PERMISSION_DENIED_APP_OP [WrongConstant]
+          checkSelfPermission(getContext(), PERMISSIONS[1]) == PackageManager.PERMISSION_GRANTED;
+! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/alexandre-araujo-barboza/wheresapp.git'
+17:45 30/03/2021
+
+gradlew bundleRelease
+
+15:21 31/03/2021
+
+gradlew wrapper --gradle-version 6.8.3
+
+12:59 01/04/2021
+
+Could not find com.android.tools.build:gradle:6.8.3.
+Searched in the following locations:
+  - https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/6.8.3/gradle-6.8.3.pom
+  - https://jcenter.bintray.com/com/android/tools/build/gradle/6.8.3/gradle-6.8.3.pom
+  - http://storage.googleapis.com/r8-releases/raw/com/android/tools/build/gradle/6.8.3/gradle-6.8.3.pom
+Required by:
+    project :
+Add google Maven repository and sync project
+Open File
+
+Could not find com.android.tools.build:gradle:6.8.3
+
+
+
+13:59 01/04/2021
+
+14:15 01/04/2021
+
+A problem occurred configuring project ':react-native-fs'.
+> Could not resolve all artifacts for configuration ':react-native-fs:classpath'.
+   > Could not find com.android.tools.build:gradle:4.1.3
+13:55 17/03/2023

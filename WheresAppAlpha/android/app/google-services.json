@@ -1,0 +1,191 @@
+{
+  "project_info": {
+    "project_number": "965473535110",
+    "firebase_url": "https://react-geo-data.firebaseio.com",
+    "project_id": "react-geo-data",
+    "storage_bucket": "react-geo-data.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965473535110:android:be7c6637b3801f7a",
+        "android_client_info": {
+          "package_name": "br.com.alexandrebarboza.wheresapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "--- undefined ---",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "--- undefined ---"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 3
+            },
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.alexandrebarboza.wheresapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965473535110:android:d4930dfc6f7e0118",
+        "android_client_info": {
+          "package_name": "com.firebasetestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "--- undefined ---",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "--- undefined ---"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 3
+            },
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.alexandrebarboza.wheresapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965473535110:android:21f8e07b4da889a0",
+        "android_client_info": {
+          "package_name": "com.firebasetestapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "--- undefined ---",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "--- undefined ---"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 3
+            },
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.alexandrebarboza.wheresapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965473535110:android:b5bb12be5b0944c5",
+        "android_client_info": {
+          "package_name": "com.firebasetestapp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "--- undefined ---",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "--- undefined ---"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 3
+            },
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.alexandrebarboza.wheresapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965473535110:android:2e9277b4564c45d1",
+        "android_client_info": {
+          "package_name": "com.wheresappalpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "--- undefined ---",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "--- undefined ---"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 3
+            },
+            {
+              "client_id": "--- undefined ---",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.alexandrebarboza.wheresapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
